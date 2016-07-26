@@ -1,0 +1,10 @@
+key,value,file
+concept,name,ddf--concepts.csv
+concept,concept_type,ddf--concepts.csv
+concept,domain,ddf--concepts.csv
+"iso_code,age,year",contraceptive_prevalence,ddf--datapoints--contraceptive_prevalence--by--iso_code--age--year.csv
+age,name,ddf--entities--age.csv
+iso_code,name,ddf--entities--iso_code.csv
+method,name,ddf--entities--method.csv
+method,is--modern_method,ddf--entities--method.csv
+method,is--traditional_method,ddf--entities--method.csv

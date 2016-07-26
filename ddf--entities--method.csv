@@ -1,0 +1,13 @@
+name,method,is--modern_method,is--traditional_method
+Sterilization,sterilization,True,False
+Female Sterilization,female_sterilization,True,False
+Male Sterilization,male_sterilization,True,False
+Injectable,injectable,True,False
+IUD,iud,True,False
+Male condom,male_condom,True,False
+Vaginal barrier methods,vaginal_barrier_methods,True,False
+Implant,implant,True,False
+Other modern methods,other_modern_methods,True,False
+Rhythm,rhythm,False,True
+Withdrawal,withdrawal,False,True
+Other traditional methods,other_traditional_methods,False,True

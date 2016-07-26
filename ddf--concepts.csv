@@ -1,0 +1,10 @@
+concept,name,concept_type,domain
+name,Name,string,
+iso_code,ISO Code,entity_domain,
+method,Methods,entity_domain,
+modern_method,Modern methods,entity_set,method
+traditional_method,Traditional methods,entity_set,method
+age,Age,entity_domain,
+year,Year(s),time,
+domain,Domain,string,
+contraceptive_prevalence,Contraceptive Prevalence,measure,
