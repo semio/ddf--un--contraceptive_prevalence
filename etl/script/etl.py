@@ -113,8 +113,17 @@ def extract_datapoints(data):
     dps = dps.stack().reset_index()
     dps.columns = ['iso_code', 'year', 'age', 'method', 'contraceptive_prevalence']
 
-    # change year range to single year in 'year' column.
-    dps.year = dps.year.map(lambda x: fix_time_range(str(x)))
+    if dps.year.dtype == object:
+        # the year column should be int or float when it read from
+        # source file. if its dtype is dtype('O'), then assumed there
+        # are time ranges in the year column.
+        # fix_time_range() returns the middle of the range.
+        import warnings
+        warnings.warn('Time range detected. They will be convert to mid-year of the range.')
+
+        dps.year = dps.year.map(lambda x: fix_time_range(str(x)))
+
+        assert dps.year.dtype == int or dps.year.dtype == float
 
     return dps
 
