@@ -1,7 +1,7 @@
 name,method,is--modern_method,is--traditional_method
-Sterilization,sterilization,True,False
 Female Sterilization,female_sterilization,True,False
 Male Sterilization,male_sterilization,True,False
+Pill,pill,True,False
 Injectable,injectable,True,False
 IUD,iud,True,False
 Male condom,male_condom,True,False
