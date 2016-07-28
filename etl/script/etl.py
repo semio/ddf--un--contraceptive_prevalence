@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import os
 
-from ddf_utils.str import to_concept_id
+from ddf_utils.str import to_concept_id, fix_time_range
 from ddf_utils.index import create_index_file
 
 # configuration of file paths
@@ -112,6 +112,9 @@ def extract_datapoints(data):
     dps = dps.set_index(['iso_code', 'year', 'age'])
     dps = dps.stack().reset_index()
     dps.columns = ['iso_code', 'year', 'age', 'method', 'contraceptive_prevalence']
+
+    # change year range to single year in 'year' column.
+    dps.year = dps.year.map(lambda x: fix_time_range(str(x)))
 
     return dps
 
