@@ -164,3 +164,5 @@ if __name__ == '__main__':
 
     print('creating index file...')
     create_index_file(out_dir)
+
+    print('Done.')
