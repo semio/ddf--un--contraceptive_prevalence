@@ -1,0 +1,105 @@
+{
+    "name": "ddf--un--contraceptive_prevalence",
+    "language": {
+        "id": "en"
+    },
+    "resources": [
+        {
+            "path": "ddf--concepts.csv",
+            "name": "ddf--concepts",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "concept"
+                    },
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "concept_type"
+                    },
+                    {
+                        "name": "domain"
+                    }
+                ],
+                "primaryKey": "concept"
+            }
+        },
+        {
+            "path": "ddf--datapoints--contraceptive_prevalence--by--iso_code--age--year.csv",
+            "name": "ddf--datapoints--contraceptive_prevalence--by--iso_code--age--year",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "iso_code"
+                    },
+                    {
+                        "name": "age"
+                    },
+                    {
+                        "name": "year"
+                    },
+                    {
+                        "name": "contraceptive_prevalence"
+                    }
+                ],
+                "primaryKey": [
+                    "iso_code",
+                    "age",
+                    "year"
+                ]
+            }
+        },
+        {
+            "path": "ddf--entities--age.csv",
+            "name": "ddf--entities--age",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "age"
+                    }
+                ],
+                "primaryKey": "age"
+            }
+        },
+        {
+            "path": "ddf--entities--iso_code.csv",
+            "name": "ddf--entities--iso_code",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "iso_code"
+                    }
+                ],
+                "primaryKey": "iso_code"
+            }
+        },
+        {
+            "path": "ddf--entities--method.csv",
+            "name": "ddf--entities--method",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "method"
+                    },
+                    {
+                        "name": "is--modern_method"
+                    },
+                    {
+                        "name": "is--traditional_method"
+                    }
+                ],
+                "primaryKey": "method"
+            }
+        }
+    ]
+}
